@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="modal-body">
                 <div style="height: 200px; line-height: 200px; text-align: center;">
-                    Please wait, inserting pokemons ...
+                    Please wait, reading pokemons.json and inserting pokemons to database...
                 </div>
             </div>
             <div class="modal-footer">
