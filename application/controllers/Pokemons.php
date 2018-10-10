@@ -77,6 +77,21 @@ class Pokemons extends CI_Controller {
         exit;
     }
 
+    public function clear() {
+        $response['status'] = 'done';
+
+        $this->load->model('pokemons_model', 'pokemons');
+        $this->load->model('types_model', 'types');
+        $this->load->model('pokemon_types_model', 'pt');
+
+        $this->pokemons->clear();
+        $this->types->clear();
+        $this->pt->clear();
+
+        echo json_encode($response);
+        exit;
+    }
+
     private function format_pokemons($pokemons) {
         $final_pokemons = [];
 

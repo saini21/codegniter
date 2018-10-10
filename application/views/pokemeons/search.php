@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <img src="<?= base_url() ?>assets/img/loader.gif" id="searchLoader" height="40"
                  style="margin-top: 116px; display: none;">
         </div>
-        <div class="col-lg-3">&nbsp;</div>
+        <div class="col-lg-3"><button id="clearPokemons" class="btn btn-danger btn-lg" style="margin-top: 20px;"><b>Clear Pokemons</b></button></div>
     </div>
     <br/>
     <div class="row" id="searchResults">
@@ -108,6 +108,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             });
 
+        });
+
+
+        $('#clearPokemons').click(function () {
+            $.ajax({
+                url: "<?= base_url() ?>index.php/pokemons/clear",
+                type: "POST",
+                dataType: "json",
+                success: function (response) {
+                    window.location.reload();
+                }
+            });
         });
     });
 

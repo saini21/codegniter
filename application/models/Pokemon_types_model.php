@@ -21,4 +21,9 @@ class Pokemon_types_model extends CI_Model {
         return $this->db->where('pokemon_id', $pokemon_id)->where('type_id', $type_id)->get('pokemon_types')->result();
     }
 
+    public function clear() {
+
+        return $this->db->empty_table('pokemon_types');
+    }
+
 }

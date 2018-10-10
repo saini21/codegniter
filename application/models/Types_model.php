@@ -19,4 +19,9 @@ class Types_model extends CI_Model {
         return $this->db->where('name', $type)->get('types')->result();
     }
 
+    public function clear() {
+
+        return $this->db->empty_table('types');
+    }
+
 }

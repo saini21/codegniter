@@ -47,4 +47,9 @@ class Pokemons_model extends CI_Model {
         return $query->result();
     }
 
+    public function clear() {
+
+        return $this->db->empty_table('pokemons');
+    }
+
 }
