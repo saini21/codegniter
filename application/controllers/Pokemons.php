@@ -43,7 +43,7 @@ class Pokemons extends CI_Controller {
         sleep(2);
         $response['status'] = 'error';
 
-        $str = file_get_contents('http://localhost/codeIgniter/assets/pokemon.json');
+        $str = file_get_contents(base_url().'assets/pokemon.json');
         $pokemons = json_decode($str, true);
         $this->load->model('pokemons_model', 'pokemons');
         $this->load->model('types_model', 'types');
